@@ -6,6 +6,10 @@ Some algorithm implementation by cpp or python
 - convolution module (`pad = VAILID` or `SAME`)
 - pooling module(`max` OR `average`)
 
+
+## function
+- sum function using iteration
+
 ## geometry
 - judge the relationships with a point and:
     - line segments
