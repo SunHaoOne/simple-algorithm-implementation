@@ -8,7 +8,7 @@ Some algorithm implementation by cpp or python
 
 
 ## function
-- sum function using iteration
+- `sum` function using iteration (avoid the sum nums overflow)
 
 ## geometry
 - judge the relationships with a point and:
