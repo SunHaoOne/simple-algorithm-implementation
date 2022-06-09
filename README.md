@@ -11,7 +11,7 @@ Some algorithm implementation by cpp or python
 - `sum` function using iteration (avoid the sum nums overflow)
 
 ## geometry
-- judge the relationships with a point and:
+- judge the relationships with a point and
     - line segments
     - straight line
     - triangle
