@@ -15,6 +15,7 @@ Some algorithm implementation by cpp or python
     - line segments
     - straight line
     - triangle
+- judge the relationships with two rectangles
 
 ## kmeans
 - random 2D data
