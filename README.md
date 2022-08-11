@@ -21,6 +21,10 @@ Some algorithm implementation by cpp or python
 - random 2D data
 - matplotlib show results
 
+## solve
+- solve linear equations
+
 ## sort
 - quickSort
 - mergeSort
+- heapSort
