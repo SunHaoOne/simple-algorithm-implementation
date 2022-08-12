@@ -53,10 +53,8 @@ vector<int> kmeans(vector<vector<double>>& data, vector<vector<double>>& centers
             }
             // 如果该类别有数据，那么计算该类别的平均值作为新的中心点
             if (countX != 0) {
-                cout << avgX << endl;
                 avgX /= countX;
                 avgY /= countY;
-                cout << avgX << endl;
                 newCenters.push_back({ avgX, avgY });
             }
             else {
