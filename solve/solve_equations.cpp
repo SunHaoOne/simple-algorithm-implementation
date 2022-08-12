@@ -29,16 +29,28 @@ double solution2() {
     int max_step = 1000;
     int step = 0;
     while (step < max_step) {
-        cout << "x = " << x << ", f(x) = " << f(x) << endl;
+        // cout << "x = " << x << ", f(x) = " << f(x) << endl;
         if (abs(f(x)) < 0.01) return x;
         x = x - lr * df(x);
         step += 1;
     }
     return -1;
 }
+
+double solution3() {
+    // newton  y = f(x0) + df(x0)(x - x0) then y = 0, x = x0 - f(x0)/df(x0);
+    double x = 1;
+    while (true) {
+        if (abs(f(x)) < 1e-6) return x;
+        x = x - f(x) / df(x);
+    }
+    return -1;
+}
 int main() {
     // x^5 + x + sin(x) = 1
     // 单调递增的函数，f =  x^5 + x + sin(x) - 1， f(0) = -1, f(1) > 0;
-    double res = solution();
-    cout << res << endl;
+
+    cout << solution() << endl;
+    cout << solution2() << endl;
+    cout << solution3() << endl;
 }
