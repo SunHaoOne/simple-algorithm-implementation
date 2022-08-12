@@ -3,15 +3,14 @@
 #include<iostream>
 using namespace std;
 
-double PRECISION = 1;
-int NUM_CLASS = 2;
+double PRECISION = 1.5;
+int NUM_CLASS = 3;
 
 double distance(vector<double>& p1, vector<double>& p2) {
     double dx = p2[0] - p1[0];
     double dy = p2[1] - p1[0];
     return sqrt(dx * dx + dy * dy);
 }
-
 
 vector<int> kmeans(vector<vector<double>>& data, vector<vector<double>>& centers) {
 
@@ -54,8 +53,10 @@ vector<int> kmeans(vector<vector<double>>& data, vector<vector<double>>& centers
             }
             // 如果该类别有数据，那么计算该类别的平均值作为新的中心点
             if (countX != 0) {
+                cout << avgX << endl;
                 avgX /= countX;
                 avgY /= countY;
+                cout << avgX << endl;
                 newCenters.push_back({ avgX, avgY });
             }
             else {
@@ -66,6 +67,7 @@ vector<int> kmeans(vector<vector<double>>& data, vector<vector<double>>& centers
         double maxCenterDiff = 0;
         for (int i = 0; i < centers.size(); i++) {
             double diff = distance(centers[i], newCenters[i]);
+            cout << diff << endl;
             if (diff > maxCenterDiff) {
                 maxCenterDiff = diff;
             }
@@ -82,11 +84,13 @@ vector<int> kmeans(vector<vector<double>>& data, vector<vector<double>>& centers
 
 int main() {
 
-    vector<vector<double>> data = { {0,0},{1,1},{0.5,1.3},{5,5},{5,6},{7,5},{8,8},};
+    vector<vector<double>> data = { {0,0},{0,1},{15,15},{15,16},{3,8},{3,7}};
     vector<vector<double>> center;
 
-    center.push_back(data[2]);
+    center.push_back(data[0]);
+    center.push_back(data[1]);
     center.push_back(data[5]);
+
 
 
 
