@@ -67,7 +67,6 @@ vector<int> kmeans(vector<vector<double>>& data, vector<vector<double>>& centers
         double maxCenterDiff = 0;
         for (int i = 0; i < centers.size(); i++) {
             double diff = distance(centers[i], newCenters[i]);
-            cout << diff << endl;
             if (diff > maxCenterDiff) {
                 maxCenterDiff = diff;
             }
